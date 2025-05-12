@@ -34,10 +34,6 @@ class FlyingRobot(BaseRobot):
     def go_down(self, step: int = 1) -> None:
         self.coords[2] -= step
 
-class Cargo:
-    def __init__(self, weight: float):
-        self.weight = weight
-
 class DeliveryDrone(FlyingRobot):
     def __init__(self, name: str, weight: float, coords: list[int] = None,
                  max_load_weight: float = 0, current_load: Cargo = None):
